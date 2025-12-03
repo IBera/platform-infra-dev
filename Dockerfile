@@ -60,12 +60,6 @@ RUN apt update && \
     apt upgrade -y && \
     apt autoremove --purge -y
 
-# Update ca-certificates
-COPY certs/. /usr/local/share/ca-certificates/
-COPY certs/. /etc/ssl/certs/
-# ENV NODE_EXTRA_CA_CERTS=/usr/local/share/ca-certificates/mitm.pem
-RUN update-ca-certificates
-
 # packages.microsoft.com repo key
 RUN curl -sSL https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 
