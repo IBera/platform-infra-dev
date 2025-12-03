@@ -1,0 +1,6 @@
+# Certificados
+*.pem
+*.cer
+
+# Carpeta de certificados
+certs/

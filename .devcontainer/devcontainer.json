@@ -1,0 +1,75 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
+{
+	"name": "Ubuntu",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	//"image": "mcr.microsoft.com/devcontainers/base:jammy",
+	"dockerComposeFile": "../docker-compose.yml",
+	"service": "terraform-modules-library",
+	"workspaceFolder": "/app",
+	// "postStartCommand": {
+	// 	"set-git-config-safe-directory": "git config --global --add safe.directory ${containerWorkspaceFolder}",
+	// 	"set-git-config-line-endings": "git config --global core.autocrlf input",
+	// 	"set-git-config-gpg-program": "git config --global --add gpg.program /usr/bin/gpg",
+	// 	"add-run-dot-sh-to-path": "ln -s ${containerWorkspaceFolder}/run.sh ~/.local/bin/run.sh",
+	// 	"create-terraform-plugin-cache-dir": "mkdir -p $HOME/.terraform.d/plugin-cache",
+	// 	"pre-commit-install": "pre-commit install"
+	// },
+	"features": {
+		"ghcr.io/devcontainers/features/azure-cli:1": {},
+		"ghcr.io/stuartleeks/dev-container-features/azure-cli-persistence:0": {},
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"installZsh": true,
+			"installOhMyZsh": true,
+			"installOhMyZshConfig": true,
+			"configureZshAsDefaultShell": true
+		},
+		"ghcr.io/devcontainers-extra/features/zsh-plugins:0": {
+			"plugins": "zsh-autosuggestions zsh-syntax-highlighting",
+			"omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions.git https://github.com/zsh-users/zsh-syntax-highlighting.git"
+		}
+	},
+	 "postCreateCommand": ".devcontainer/scripts/post-create.sh",
+	 "remoteEnv": {
+		"NODE_EXTRA_CA_CERTS": "/Users/ivangonzalezberasategui/Code/dev_containers/zsh_dev/certs/cloudflare.pem"
+	  },
+	 "customizations": {
+	 	"vscode": {
+	 		"settings": {
+	 			"editor.tabSize": 4,
+	 			"terminal.integrated.fontFamily": "MesloLGM Nerd Font",
+				"terminal.integrated.fontWeight": "normal",
+	 			"terminal.integrated.fontLigatures.enabled": true,
+	 			"terminal.integrated.defaultProfile.linux": "zsh",
+	 			"terminal.integrated.profiles.linux": {
+	 				"zsh": {
+	 					"path": "/bin/zsh",
+	 					"icon": "terminal-ubuntu"
+	 				}
+	 			},
+				"extensions.verifySignature": false
+	 		},
+			"extensions": [
+				"dbaeumer.vscode-eslint",
+				"hashicorp.terraform",
+				"nhoizey.gremlins"
+			]
+	 	}
+	 }
+	
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "uname -a",
+
+	// Configure tool-specific properties.
+	// "customizations": {},
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}
