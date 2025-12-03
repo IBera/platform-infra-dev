@@ -13,21 +13,21 @@ WIP — experimental. The repository contains tooling and configuration for deve
 - Docker Compose (v2, use the `docker compose` command).
 - Visual Studio Code (optional) with the "Remote - Containers" / "Dev Containers" extension to open the project inside the container.
 
-## Uso: iniciar el Dev Container desde VS Code
+## Start the Dev Container (VS Code)
 
-1. Clonar el repositorio:
+1. Clone the repository:
 
 ```bash
 git clone git@github.com:IBera/platform-infra-dev.git
 cd platform-infra-dev
 ```
 
-2. Abrir el proyecto en Visual Studio Code y usar "Reopen in Container":
+2. Open the project in Visual Studio Code and use "Reopen in Container":
 
-- Abre VS Code en la carpeta del repositorio (`code .`).
-- Abre la Paleta de comandos (`⇧⌘P`) y ejecuta `Dev Containers: Reopen in Container` (o `Remote-Containers: Reopen in Container`).
+- Open VS Code in the repository folder (`code .`).
+- Open the Command Palette (`⇧⌘P`) and run `Dev Containers: Reopen in Container` (or `Remote-Containers: Reopen in Container`).
 
-VS Code construirá y arrancará el entorno de desarrollo dentro del contenedor.
+VS Code will build and start the development environment inside the container.
 
 ## Repository structure
 
