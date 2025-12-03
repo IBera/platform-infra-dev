@@ -6,3 +6,5 @@ Devcontainer for Platform Engineers — contains tooling, common configs and wor
 - DevContainer configuration
 - Common tooling and scripts
 
+## Tests
+
