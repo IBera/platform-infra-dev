@@ -8,11 +8,11 @@ The devcontainer provides a reproducible environment with recommended tools and 
 
 ## Start the Dev Container (summary)
 
-1. Copy the template if it does not exist yet:
+1. Ensure a `.devcontainer/devcontainer.json` exists in the repository. Create or customize it as needed:
 
 ```bash
 mkdir -p .devcontainer
-cp devcontainer.json.back .devcontainer/devcontainer.json
+# create .devcontainer/devcontainer.json or add your own content
 ```
 
 2. Open the repo in VS Code and select: `Dev Containers: Reopen in Container`.
@@ -23,7 +23,7 @@ VS Code will build the image (according to `Dockerfile`/`devcontainer.json`) and
 
 - `.devcontainer/devcontainer.json` — main container configuration (extensions, settings, forwardPorts, postCreateCommand, features).
 - `Dockerfile` — base image referenced by `devcontainer.json`.
-- `devcontainer.json.back` — template included in this repo; copy it to `.devcontainer/` to use it.
+- `.devcontainer/devcontainer.json` — recommended location for the Dev Container configuration file.
 
 ## Common customization
 

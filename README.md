@@ -33,7 +33,7 @@ VS Code will build and start the development environment inside the container.
 
 - `Dockerfile` — base image / devcontainer image.
 - `docker-compose.yml` — service definitions and local orchestration.
-- `devcontainer.json.back` — template configuration for VS Code Dev Container.
+- `.devcontainer/` — directory for VS Code Dev Container configuration (place `devcontainer.json` here).
 - `fonts/` — font collections included in the image.
 
 ## Contributing
